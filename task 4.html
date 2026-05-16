@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cloud Security</title>
+
+<style>
+body{font-family:Arial;background:#121212;color:white;text-align:center;}
+.box{width:400px;margin:auto;margin-top:40px;background:#1e1e1e;padding:20px;border-radius:10px;}
+button{padding:10px;background:red;color:white;border:none;}
+.card{background:#2d2d2d;margin-top:10px;padding:10px;border-radius:8px;}
+</style>
+</head>
+<body>
+
+<div class="box">
+
+<h2>Cloud Security & IAM</h2>
+
+<button onclick="secure()">Run Security Setup</button>
+
+<div id="out"></div>
+
+</div>
+
+<script>
+function secure(){
+
+    let logs = [
+        "IAM Role Created → Admin Access",
+        "S3 Bucket Encryption → Enabled",
+        "Access Policy → Restricted",
+        "Firewall Rules → Active",
+        "Security Status → HIGH SECURITY"
+    ];
+
+    out.innerHTML = "";
+
+    logs.forEach(l=>{
+        out.innerHTML += `<div class="card">${l}</div>`;
+    });
+}
+</script>
+
+</body>
+</html>

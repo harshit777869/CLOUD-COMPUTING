@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cloud Monitoring</title>
+
+<style>
+body{font-family:Arial;background:#121212;color:white;text-align:center;}
+.box{width:400px;margin:auto;margin-top:40px;background:#1e1e1e;padding:20px;border-radius:10px;}
+button{padding:10px;background:#00ff99;border:none;}
+.card{background:#2d2d2d;margin-top:10px;padding:10px;border-radius:8px;}
+</style>
+</head>
+<body>
+
+<div class="box">
+
+<h2>Cloud Monitoring</h2>
+
+<button onclick="monitor()">Start Monitoring</button>
+
+<div id="out"></div>
+
+</div>
+
+<script>
+function monitor(){
+
+    let metrics = [
+        "CPU Usage: 45%",
+        "RAM Usage: 62%",
+        "Disk Usage: 70%",
+        "Network: Stable",
+        "Status: Healthy"
+    ];
+
+    out.innerHTML = "";
+
+    metrics.forEach(m=>{
+        out.innerHTML += `<div class="card">${m}</div>`;
+    });
+}
+</script>
+
+</body>
+</html>

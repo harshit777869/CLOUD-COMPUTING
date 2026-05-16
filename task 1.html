@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cloud Storage</title>
+
+<style>
+body{font-family:Arial;background:#121212;color:white;text-align:center;}
+.box{width:400px;margin:auto;margin-top:40px;background:#1e1e1e;padding:20px;border-radius:10px;}
+input,button{padding:10px;width:90%;margin:5px;}
+button{background:#00ff99;border:none;cursor:pointer;}
+.file{background:#2d2d2d;margin-top:10px;padding:10px;border-radius:8px;}
+</style>
+</head>
+<body>
+
+<div class="box">
+
+<h2>AWS S3 Storage (Simulation)</h2>
+
+<input id="file" placeholder="File name">
+
+<button onclick="upload()">Upload File</button>
+
+<div id="list"></div>
+
+</div>
+
+<script>
+let files = [];
+
+function upload(){
+    files.push(file.value);
+    render();
+}
+
+function render(){
+    list.innerHTML = "";
+    files.forEach(f=>{
+        list.innerHTML += `<div class="file">📄 ${f}</div>`;
+    });
+}
+</script>
+
+</body>
+</html>
